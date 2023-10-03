@@ -1,6 +1,6 @@
-resource "aws_s3_bucket" "my_test_bucket" {
-  bucket = var.bucket_name
-  tags = {
-    "user_uuid" = var.user_uuid
-  }
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  bucket_name = var.bucket_name
+  user_uuid = var.user_uuid
+  
 }
