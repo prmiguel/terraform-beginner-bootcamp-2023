@@ -1,6 +1,7 @@
 tasks:
   - name: terraform
     before: |
+      cp $PROJECT_ROOT
       source ./bin/set_tf_alias
       source ./bin/install_terraform_cli
       cp $PROJECT_ROOT/terraform.tfvars.example $PROJECT_ROOT/terraform.tfvars
@@ -11,9 +12,16 @@ tasks:
       source ./bin/install_aws_cli
   - name: http-server
     before: |
+      cp $PROJECT_ROOT
       npm install --global http-server
     command: 
       http-server
+  - name: sinatra
+    before: |
+      cp $PROJECT_ROOT
+      cd terratowns_mock_server 
+      bundle install
+      bundle exec ruby server.rb 
 vscode:
   extensions:
     - amazonwebservices.aws-toolkit-vscode
