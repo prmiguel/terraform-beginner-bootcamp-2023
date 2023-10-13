@@ -37,3 +37,25 @@ DESCRIPTION
   town = "missingo"
   content_version = 1
 }
+
+####################
+# Site Three       #
+####################
+module "terrahouse_aws_site_three" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.teacherseat_user_uuid
+  public_path = var.sitethree.public_path
+  content_version = var.sitethree.content_version
+}
+
+resource "terratowns_home" "home_three" {
+  name = "Welcome to Cochabamba, Bolivia"
+  description = <<DESCRIPTION
+Cochabamba is a city located in the central part of Bolivia, in a valley bearing the same name. 
+Known for its pleasant climate, Cochabamba is often referred to as the "City of Eternal Spring." 
+The city is famous for its rich history, vibrant culture, and delicious cuisine.
+DESCRIPTION
+  domain_name = module.terrahouse_aws_site_three.domain_name
+  town = "the-nomad-pad"
+  content_version = 1
+}

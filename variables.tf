@@ -24,3 +24,10 @@ variable "sitetwo" {
     content_version = number
   })
 }
+
+variable "sitethree" {
+  type = object({
+    public_path = string
+    content_version = number
+  })
+}

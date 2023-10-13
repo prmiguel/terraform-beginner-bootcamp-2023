@@ -5,13 +5,13 @@ terraform {
       version = "1.0.0"
     }
   }
-#   cloud {
-#     organization = "MPTerraformBootcamp"
+  cloud {
+    organization = "MPTerraformBootcamp"
 
-#     workspaces {
-#       name = "terrahouse"
-#     }
-#   }
+    workspaces {
+      name = "terrahouse"
+    }
+  }
 
 }
 

@@ -8,3 +8,7 @@ sitetwo = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/sitetwo"
   content_version = 1
 }
+sitethree = {
+  public_path = "/workspace/terraform-beginner-bootcamp-2023/public/sitethree"
+  content_version = 2
+}
