@@ -11,7 +11,9 @@ tasks:
     env:
       AWS_CLI_AUTO_PROMPT: on-partial
     before: |
+      cp $PROJECT_ROOT
       source ./bin/install_aws_cli
+      source ./bin/build_provider
   - name: http-server
     before: |
       cp $PROJECT_ROOT

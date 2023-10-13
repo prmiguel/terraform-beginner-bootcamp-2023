@@ -12,4 +12,12 @@ terraform {
 #       name = "terrahouse"
 #     }
 #   }
+
+}
+
+provider "terratowns" {
+  # endpoint = "http://localhost:4567/api"
+  endpoint = var.terratowns_endpoint
+  user_uuid = var.teacherseat_user_uuid
+  token = var.terratowns_access_token
 }

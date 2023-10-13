@@ -1,7 +1,10 @@
 terratowns_endpoint="https://terratowns.cloud/api"
 teacherseat_user_uuid="645bb884-5c68-4350-a4fb-034270425a2d"
-bucket_name="07hvxx3vf9z70rg33d6quzgm7ls43ufy"
-index_html_filepath="/workspace/terraform-beginner-bootcamp-2023/public/index.html"
-error_html_filepath="/workspace/terraform-beginner-bootcamp-2023/public/error.html"
-assets_path="/workspace/terraform-beginner-bootcamp-2023/public/assets/"
-content_version=1
+siteone = {
+  public_path = "/workspace/terraform-beginner-bootcamp-2023/public/siteone"
+  content_version = 1
+}
+sitetwo = {
+  public_path = "/workspace/terraform-beginner-bootcamp-2023/public/sitetwo"
+  content_version = 1
+}
